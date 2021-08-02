@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vegetarian planet</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+</head>
+<body>
+    
+    <div id="container" class="container-fluid min-vh-100 bg-success d-flex flex-column align-items-center">
+        
+        <nav id="nav-bar" class="col-11 sticky-top bg-light d-flex justify-content-center align-items-center py-2">
+
+            <h1 class="main-title  me-4 fs-4 text-success">Vegetarian Planet</h1>
+            <div class="img-div">
+                <img src="./images/logo-veggie.png" alt="logo" class="animate__animated animate__rubberBand logo img-fluid">
+            </div>
+        </nav>
+
+        <form class="row gx-4 mt-5 filters d-flex flex-column flex-md-row   align-items-md-start align-items-center justify-content-center" id="form">
+
+            <div class="col-lg-3 col-11">
+                <div class="input-group flex-nowrap  " id="search">
+                    <span class="input-group-text rounded-0 border-0" id="search-icon"><i class="fas fa-search"></i></span>
+                    <input id="search-box" type="text" class="form-control shadow-none rounded-0 border-0" placeholder="Find recipe" aria-label="search-box" aria-describedby="search-icon">
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-11">
+                <div class="input-group flex-nowrap"> 
+                    <label class="input-group-text rounded-0" for="food-type" id="food-type-icon"><i class="fas fa-utensils"></i></label> 
+                    <select id="food-type" class="form-select shadow-none text-dark rounded-0" aria-describedby="food-type-icon">
+                        <option value="breakfast">Breakfast</option>
+                        <option value="soup">Soup</option>
+                        <option value="main course">Main course</option>
+                        <option value="side dish">Side dish</option>
+                        <option value="dessert">Dessert</option>
+                        <option value="salad">Salad</option>
+                        <option value="snack">Snack</option>
+                        <option value="sauce">Sauce</option>
+                        <option value="drink">Drink</option>
+                        <option value="beverage">Beverage</option>
+                    </select>    
+                </div>
+
+            </div>
+
+            <div class="col-lg-4 col-11">
+
+                <div class="d-flex bg-light" id="select-box" onclick="showCheckBoxes()">
+                    <div class="input-group flex-nowrap" id="intolerances">
+                        <span class="input-group-text rounded-0" id="intolerances-label">Intolerances?</span>
+                        <input id="intolerances-input" type="text" class="form-control rounded-0" placeholder="Select them" aria-label="intolerances-input" aria-describedby="intolerances-label" disabled>
+                    </div>
+                </div>
+
+                <div id="checkBoxes" class=" py-2 ps-2 pe-0 bg-light ">
+                    <label for="dairy" class="me-2"><input type="checkbox" value="dairy" id="dairy">Dairy</label> 
+                    <label for="egg" class="me-2"><input type="checkbox" value="egg" id="egg">Egg</label> 
+                    <label for="egg" class="me-2"><input type="checkbox" value="gluten" id="gluten">Gluten</label> 
+                    <label for="egg" class="me-2"><input type="checkbox" value="sesame" id="sesame">Sesame</label> 
+                    <label for="egg" class="me-2"><input type="checkbox" value="peanut" id="peanut">Peanut</label> 
+                    <label for="egg" class="me-2"><input type="checkbox" value="soy" id="soy">Soy</label>  
+                    <label for="egg" class="me-2"><input type="checkbox" value="wheat" id="wheat">Wheat</label> 
+                    <label for="egg" class="me-2"><input type="checkbox" value="tree nut" id="tree-nut">Tree nut</label> 
+                 </div>
+            </div>
+        </form>
+
+        <button id="showRecipes" class="btn-sm btn-dark my-4 col-4 shadow-none col-md-2 col-lg-1" type="button">Show me</button>
+
+
+        <div id="recipes-wrapper" class="d-flex justify-content-center align-items-center flex-wrap">
+             
+        </div>
+
+        
+
+    </div>
+
+    
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+</body>
+</html>

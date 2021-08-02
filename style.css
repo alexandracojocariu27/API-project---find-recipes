@@ -1,0 +1,37 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', sans-serif; 
+}
+
+.logo {
+    width: 2.5rem;
+} 
+
+#form, #recipes-wrapper {
+    width: 95vw;
+}
+
+#checkBoxes {
+    display: none;        
+}
+
+img {
+    user-select: none;
+    pointer-events: none;
+}    
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+
+ 
